@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rincón literario</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="./js/perfil.js"></script>
+</head>
+<body>
+
+    <div class="contenido">
+
+        <h1 class="titulo">Perfil</h1>
+
+        <div id="menu">
+            <header>
+                <nav class="nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="generos.html">Géneros</a>
+                    <a href="#">Perfil</a>
+                </nav>
+            </header>
+        </div>
+
+        <div id="main">
+
+            <h2 class="subtitulo">Biblioteca de <span id="usuario">Usuario</span></h2>
+
+            <div id="leidos" class="lista">
+                <fieldset id="fieldset">
+                    <legend id="legend">Leídos</legend>
+                    <div id="libros-leidos"></div>
+                </fieldset>
+            </div>
+            
+            <div id="leyendo" class="lista">
+                <fieldset id="fieldset">
+                    <legend id="legend">Leyendo</legend>
+                    <div id="libros-leyendo"></div>
+                </fieldset>
+            </div>
+            
+            <div id="tbr" class="lista">
+                <fieldset id="fieldset">
+                    <legend id="legend">Quiero leer</legend>
+                    <div id="libros-tbr"></div>
+                </fieldset>
+            </div>            
+
+            <form id="profileForm" style="display: grid;">
+
+                <label for="nombre" class="label">Nombre *</label>
+                <input type="text" class="menu-opciones" id="nombre" required>
+                
+                <label for="apellido" class="label">Apellido *</label>
+                <input type="text" class="menu-opciones" id="apellido" required>
+                
+                <label for="email" class="label">E-mail *</label>
+                <input type="email" class="menu-opciones" id="email" required>
+                  
+                <label for="gen-fav" class="label">Género favorito</label>
+                <select id="gen-fav" class="menu-opciones">
+                    <option value="todos" selected>Selecciona tu género favorito</option>
+                    <option value="misterio">Misterio</option>
+                    <option value="terror">Terror</option>
+                    <option value="romance">Romance</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="aventura">Aventuras</option>
+                </select>
+
+                <button type="submit" class="boton label">Guardar cambios</button>
+                <div id="confirmationMsg" style="display: none; color: green; margin-top: 10px;">Datos guardados correctamente.</div>
+
+            </form>
+
+            <button id="logoutBtn" class="boton label">Cerrar sesión</button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
