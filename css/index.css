@@ -1,0 +1,289 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imagenes/fondo.PNG);
+    background-size: 100%;
+    margin: 0 !important;
+    font-family: "Coda" !important;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    margin: 0 12%;
+    padding-bottom: 30px;
+    background-color: rgb(255, 255, 255, 0.85);
+    min-height: 100vh;
+}
+
+#main {
+    margin: 0 50px;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 380%;
+    color: brown;
+    font-weight: bolder;
+    margin-top: 2.8%;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 170%;
+    color: brown;
+    margin-left: 0;
+}
+
+#menu {
+    border-top: brown solid 2px;
+    margin: 0 0;
+    margin-bottom: 30px;
+    width: 99.3%;
+    padding: 4px;
+}
+
+#menu header, #menu nav{
+    width: 100%;
+    justify-content: center;  
+}
+
+.nav a {
+    color: brown;
+    font-size: 110%;
+    text-decoration: none;
+    margin: 0 7%;
+    padding: 2px 6px;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.gallery {
+    margin: 10px;
+    border: 2px solid brown;
+    border-radius: 10px;
+    width: 180px;
+    height: 350px;
+    background-color: white;
+    display: inline-table;
+    transition: 0.3s;
+}
+
+.gallery img {
+    width: 100%;
+    height: 270px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin-bottom: 0;
+}
+
+.info {
+    display: grid;
+    height: 68px;
+    align-items: center;
+    text-align: center;
+}
+
+.datos {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nombre {
+    color: brown;
+    font-size: 100%;
+}
+
+.autor {
+    color: rgb(165, 73, 73);
+    font-size: 90%;
+}
+
+.gallery:hover {
+    scale: 1.05;
+    background-color: brown;
+    .nombre, .autor {
+        color: white;
+    }
+}
+
+.overlay {
+	position: fixed;
+    display: flex;
+    align-items: center;
+	top: 0;
+	bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    background-attachment: inherit;
+    visibility: hidden;
+	opacity: 0;
+    z-index: 999;
+	&:target {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.popup {
+	margin: 75px auto;
+    display: inline-block;
+    vertical-align: middle;
+	padding: 20px;
+    background: white;
+	color: black;
+	border: 1px solid white;
+    border-radius: 8px;
+	width: 600px;
+	position: relative;
+    .close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 5px;
+        right: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: brown;
+        border: 1px solid brown;
+        border-radius: 5px;
+    }
+}
+
+#generoFav {
+    margin-bottom: 80px;
+}
+
+
+#libros-genFav {
+    max-height: 450px;
+    min-height: 300px;
+    overflow-y: scroll;
+    border: none;
+    padding: 15px;
+}
+
+.lista{
+    max-height: 450px;
+    border: none;
+    margin: 20px 0;
+}
+
+#fieldset {
+    background-color: rgb(0, 0, 0, 0.2);
+    border: brown 2px solid;
+    border-radius: 8px;
+}
+
+#legend {
+    background-color: rgb(165, 42, 42, 0.9);
+    color: white;
+    font-size: 24px;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+.boton{
+    width: max-content;
+    border: white 1px solid;
+    background-color: brown;
+    color: white;
+    font-size: 16px;
+    margin: 10px 20px 0 0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    scale: 1.05;
+}
+
+.menu-opciones {
+    width: 40vh;
+    border: brown 2px solid;
+    background-color: white;
+    color: brown;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#carousel-populares {
+    width: 15rem;
+    justify-self: center;
+    margin: 20px 0;
+}
+
+.label {
+    margin-top: 20px;
+}
+
+@media (max-width: 410px){
+    .contenido {
+        margin: 0 5%;
+    }
+}
+
+.eliminar {
+    background-color: brown;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.eliminar:hover {
+    background-color: white;
+    color: brown;
+    border-color: brown;
+}
+
+.libro-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.libro-item:last-child {
+    border-bottom: none;
+}
+
+.libro-item p {
+    margin: 0;
+    margin-left: 10px;
+    padding-right: 5px;
+    color: black;
+}
+
+#seleccionar {
+    width: max-content;
+    border: brown 1px solid;
+    background-color: white;
+    color: brown;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+#search-input {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
