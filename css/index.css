@@ -170,7 +170,7 @@ body {
 }
 
 .lista{
-    max-height: 450px;
+    max-height: fit-content;
     border: none;
     margin: 20px 0;
 }
